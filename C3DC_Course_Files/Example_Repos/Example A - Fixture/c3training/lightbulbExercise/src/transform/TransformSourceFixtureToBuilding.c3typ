@@ -1,0 +1,13 @@
+/**
+* This type maps the data flow from {@link SourceFixture} to {@link Building}.
+*/
+type TransformSourceFixtureToBuilding mixes Building transforms SourceFixture {
+    // Direct map of the building field to id
+    id: ~ expression "building"
+    
+    // Direct map of the latitude field
+    latitude: ~ expression "latitude"
+    
+    // Direct map of the longitude field
+    longitude: ~ expression "longitude"
+}

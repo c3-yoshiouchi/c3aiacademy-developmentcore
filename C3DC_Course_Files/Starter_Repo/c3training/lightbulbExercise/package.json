@@ -1,0 +1,6 @@
+{
+    "name": "lightbulbExercise",
+    "description": "Lightbulb Training Package",
+    "author": "Developer Support Engineering",
+    "dependencies": ["standardDependencies", "machineLearning"]
+}

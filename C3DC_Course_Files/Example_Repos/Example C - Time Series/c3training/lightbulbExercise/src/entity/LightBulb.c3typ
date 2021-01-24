@@ -1,0 +1,24 @@
+/**
+* LightBulb.c3typ
+* A single light bulb.
+*/
+extendable entity type LightBulb schema name "LGHT_BLB" {
+    // The bulb type for this bulb
+    bulbType: !string enum('CFL', 'LED', 'INCAN')
+    
+    // The light bulb's wattage
+    wattage: !decimal
+    
+    // The name of this light bulb's {@link Manufacturer}.
+    manufacturer: !Manufacturer
+    
+    // The time at which this light bulb was manufactured.
+    startDate: !datetime
+
+    // The collection of {@link LightBulbToFixtureRelation}s for this bulb
+    @db(order='descending(start)')
+    fixtureHistory: [LightBulbToFixtureRelation](from)
+
+    // The {@link Fixture} this bulb is currenly in
+    currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+}

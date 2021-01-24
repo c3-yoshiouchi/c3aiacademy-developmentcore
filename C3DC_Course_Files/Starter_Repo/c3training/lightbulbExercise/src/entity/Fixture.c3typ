@@ -1,0 +1,9 @@
+/**
+* Fixture.c3typ
+* A single light fixture in which one {@link SmartBulb} can be installed.
+*/
+entity type Fixture schema name "FXTR" {
+    // The apartment this fixture is in
+    // Reference Field
+    apartment: !Apartment
+}

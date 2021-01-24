@@ -1,0 +1,18 @@
+/**
+* SourceLightBulbToFixtureRelation.c3typ
+* This type represents the raw data for {@link LightBulbToFixtureRelation} information.
+*/
+type SourceLightBulbToFixtureRelation mixes Source {
+ 
+ // This represents the id of a {@link SmartBulb}
+ SN: string
+ 
+ // This represents the id of a {@link Fixture}
+ fixture: string
+
+// The date time to use for the start of a {@link LightBulbToFixtureRelation}
+ start: datetime
+
+ // The date time to use for the end of a {@link LightBulbToFixtureRelation}
+ end: datetime
+}

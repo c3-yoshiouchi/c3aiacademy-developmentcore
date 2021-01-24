@@ -1,0 +1,10 @@
+/**
+* TransformSourceFixtureToApartment.c3typ
+* This type maps the data flow from {@link SourceFixture} to {@link Apartment}.
+*/
+type TransformSourceFixtureToApartment mixes Apartment transforms SourceFixture {
+    // Direct map of the apartment field to id
+    id: ~ expression "apartment"
+    // Maps a reference to the building field.
+    building: ~ expression { id: "building" }
+}

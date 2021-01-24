@@ -1,0 +1,16 @@
+/**
+* SourceFixture.c3typ
+* The raw data for {@link Fixture}s, {@link Apartments}s, and {@link Building}s.
+*/
+type SourceFixture mixes Source {
+    // The id of a Fixture
+    fixture: string
+    // The id of an Apartment
+    apartment: string
+    // The id of a Building
+    building: string
+    // The latitude of a Building
+    latitude: double
+    // The longitude of a Building
+    longitude: double
+}

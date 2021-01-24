@@ -1,0 +1,15 @@
+/**
+* Building.c3typ
+* A building containing many {@link Apartment}s.
+*/
+entity type Building schema name "BLDNG"{
+
+    // The apartments that are in this building.
+    apartments: [Apartment](building)
+
+    // The latitude of this building.
+    latitude: !double
+
+    // The longitude of this building.
+    longitude: !double
+}

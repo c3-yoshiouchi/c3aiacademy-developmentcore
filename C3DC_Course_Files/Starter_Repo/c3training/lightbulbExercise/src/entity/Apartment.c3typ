@@ -1,0 +1,12 @@
+/**
+* Apartment.c3typ
+* An apartment in a {@link Building} with many {@link Fixuture}s in it
+*/
+entity type Apartment schema name "APRTMNT" {
+    // The building this apartment is in
+    // Reference Field
+    building: !Building
+    // The fixtures in the apartment
+    // Collection Field
+    fixtures: [Fixture](apartment)
+}

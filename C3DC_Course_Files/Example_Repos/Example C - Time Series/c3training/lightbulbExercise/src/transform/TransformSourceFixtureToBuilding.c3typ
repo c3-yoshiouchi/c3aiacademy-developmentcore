@@ -1,0 +1,15 @@
+/**
+* TransformSourceFixtureToBuilding.c3typ
+* This type transoforms the data from the {@link SourceFixture} to the
+* {@link Building} type.
+*/
+type TransformSourceFixtureToBuilding mixes Building transforms SourceFixture {
+ // This field will take the value of the "building" field for the record
+ id: ~ expression "building"
+
+  // This field will take the value of the "latitude" field for the record
+ latitude: ~ expression "latitude"
+
+ // This field will take the value of the "longitude" field for the record
+ longitude: ~ expression "longitude"
+}
