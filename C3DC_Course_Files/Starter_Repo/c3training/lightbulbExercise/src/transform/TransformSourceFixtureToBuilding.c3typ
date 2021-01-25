@@ -1,0 +1,12 @@
+/**
+* TransformSourceFixtureToBuilding.c3typ
+* Transforms data from {@link SourceFixture} to {@link Building}
+*/
+type TransformSourceFixtureToBuilding mixes Building transforms SourceFixture {
+    // The id of a building
+    id: ~ expression "building"
+    // The latitude of a building
+    latitude: ~ expression "latitude"
+    // The longitude of a building
+    longitude: ~ expression "longitude"
+}

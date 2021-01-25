@@ -1,0 +1,11 @@
+/**
+* Manufacturer.c3typ
+* A company that manufactures lightbulbs.
+*/
+@db(datastore="Vendors")
+entity type Manufacturer mixes External, NoSystemCols schema name "LIGHTBULB_MANUFACTURERS"{
+    // The id of the manufacturer
+    id: ~ schema name "manufacturer_id"
+    // The name of the manufacturer
+    fullName: string schema name "manufacturer_name"
+}

@@ -1,0 +1,10 @@
+/**
+* TransformSourceFixtureToApartment.c3typ
+* Transforms data from {@link SourceFixture} to {@link Apartment}
+*/
+type TransformSourceFixtureToApartment mixes Apartment transforms SourceFixture {
+    // The id of an apartment
+    id: ~ expression "apartment"
+    // A reference to the id of a building
+    building: ~ expression { id: "building"}
+}

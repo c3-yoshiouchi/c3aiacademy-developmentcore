@@ -1,0 +1,10 @@
+/**
+* TransformSourceFixtureToFixture.c3typ
+* Transforms data from {@link SourceFixture} to {@link Fixture}
+*/
+type TransformSourceFixtureToFixture mixes Fixture transforms SourceFixture {
+    // The id of a fixture
+    id: ~ expression "fixture"
+    // A reference to the id of an apartment
+    apartment: ~ expression { id: "apartment"}
+}
