@@ -5,7 +5,11 @@
 @db(datastore="Vendors")
 entity type Manufacturer mixes External, NoSystemCols schema name "LIGHTBULB_MANUFACTURERS"{
     // The id of the manufacturer
-    id: ~ schema name "manufacturer_id"
+    //id: ~ schema name "manufacturer_id"
+    id: !string
     // The name of the manufacturer
-    fullName: string schema name "manufacturer_name"
+    //fullName: !string schema name "manufacturer_name"
+    fullName: !string
+    // A collection field for lightBulbs on the LightBulb Type
+    lightBulbs: [LightBulb](manufacturer)
 }

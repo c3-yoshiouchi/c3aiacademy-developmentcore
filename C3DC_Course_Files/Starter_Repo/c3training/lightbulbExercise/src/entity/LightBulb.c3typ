@@ -1,0 +1,17 @@
+/**
+* LightBulb.c3typ
+* A single light bulb.
+*/
+extendable entity type LightBulb schema name "LGHT_BLB" {
+    // The bulb type for this bulb
+    bulbType: !string enum('CFL', 'LED', 'INCAN')
+    // The wattage of this bulb
+    wattage: !decimal
+    // The manufacturer of this bulb
+    // Reference field
+    manufacturer: !Manufacturer
+    // The start date for this bulb
+    startDate: !datetime
+    // typeIdent
+    typeIdent: string
+}

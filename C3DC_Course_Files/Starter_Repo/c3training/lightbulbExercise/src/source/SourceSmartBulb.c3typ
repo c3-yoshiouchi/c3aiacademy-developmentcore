@@ -1,0 +1,16 @@
+/**
+* SourceSmartBulb.c3typ
+* The source for {@link SmartBulb} data
+*/
+type SourceSmartBulb mixes Source {
+    // The id of a fixture
+    SN: string
+    // The id of an apartment
+    BulbType: string
+    // The id of a building
+    Wattage: decimal
+    // The latitude of a building
+    Manufacturer: string
+    // The longitude of a building
+    StartDate: datetime
+}

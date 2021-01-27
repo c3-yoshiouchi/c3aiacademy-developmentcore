@@ -1,0 +1,18 @@
+/**
+* TransformSourceSmartBulbToSmartBulb.c3typ
+* Transforms data from {@link SourceSmartBulb} to {@link SmartBulb}
+*/
+type TransformSourceSmartBulbToSmartBulb mixes SmartBulb transforms SourceSmartBulb {
+    // The id of a smart bulb
+    id: ~ expression "SN"
+    // The bulb type of a smart bulb
+    bulbType: ~ expression "BulbType"
+    // The wattage of a smart bulb
+    wattage: ~ expression "Wattage"
+    // The manufacturer of a smart bulb
+    manufacturer: ~ expression {id: "'Manufacturer'"}
+    // The start date
+    startDate: ~ expression "StartDate"
+    // temperatureUOM
+    temperatureUOM: ~ expression {id: "'degrees_celsius'"}
+}
