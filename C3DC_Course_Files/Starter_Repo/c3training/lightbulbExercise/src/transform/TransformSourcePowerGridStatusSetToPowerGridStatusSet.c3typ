@@ -1,0 +1,13 @@
+/**
+* TransformSourcePowerGridStatusSetToPowerGridStatusSet.c3typ
+*/
+type TransformSourcePowerGridStatusSetToPowerGridStatusSet mixes PowerGridStatusSet transforms SourcePowerGridStatus {
+    // The id of a power grid status set
+    id: ~ expression "concat(Building, '_', TS)"
+    // parent
+    parent: ~ expression {id: "Building"}
+    // time stamp
+    timestamp: ~ expression "TS"
+    // The status of a power grid
+    value: ~ expression "Status"
+}

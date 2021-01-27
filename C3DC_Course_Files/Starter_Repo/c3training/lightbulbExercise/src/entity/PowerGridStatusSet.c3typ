@@ -1,0 +1,5 @@
+/**
+* PowerGridStatusSet.c3typ
+* Sparse timestamped events for {@link Building}
+*/
+entity type PowerGridStatusSet mixes TimedValueHistory<Building>, Integer schema name 'PWR_GRD_STTS_ST'

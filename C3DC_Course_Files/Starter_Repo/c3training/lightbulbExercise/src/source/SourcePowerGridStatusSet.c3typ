@@ -1,0 +1,12 @@
+/**
+* SourcePowerGridStatusSet.c3typ
+* The source for {@link PowerGridStatusSet} data
+*/
+type SourcePowerGridStatusSet mixes Source {
+    // The building
+    Building: string
+    // The date time stamp when the status changes
+    TS: datetime
+    // The status of a power grid
+    Status: int
+}

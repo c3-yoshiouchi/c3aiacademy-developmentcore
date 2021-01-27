@@ -1,0 +1,6 @@
+/**
+* PowerGridStatus.c3typ
+* The current timestamped event value for {@link Building}
+* Populated at runtime
+*/
+type PowerGridStatus mixes TimedValue, Integer
