@@ -1,7 +1,7 @@
 /**
 * TransformSourcePowerGridStatusSetToPowerGridStatusSet.c3typ
 */
-type TransformSourcePowerGridStatusSetToPowerGridStatusSet mixes PowerGridStatusSet transforms SourcePowerGridStatus {
+type TransformSourcePowerGridStatusSetToPowerGridStatusSet mixes PowerGridStatusSet transforms SourcePowerGridStatusSet {
     // The id of a power grid status set
     id: ~ expression "concat(Building, '_', TS)"
     // parent
