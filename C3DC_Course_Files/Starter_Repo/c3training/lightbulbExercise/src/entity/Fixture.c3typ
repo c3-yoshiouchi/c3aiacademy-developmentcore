@@ -6,4 +6,10 @@ entity type Fixture schema name "FXTR" {
     // The apartment this fixture is in
     // Reference Field
     apartment: !Apartment
+
+    // The collection of {@link LightBulbToFixtureRelation}s for this bulb
+    @db(order='descending(start)')
+    bulbHistory: [LightBulbToFixtureRelation](to)
+    // The {link LightBulb} this fixture has
+    currentBulb: LightBulb stored calc 'bulbHistory[0].(end == null).to'
 }

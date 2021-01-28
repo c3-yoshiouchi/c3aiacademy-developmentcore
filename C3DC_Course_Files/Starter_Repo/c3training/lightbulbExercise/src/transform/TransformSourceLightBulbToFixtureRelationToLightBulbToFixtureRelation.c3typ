@@ -1,0 +1,15 @@
+/**
+* TransformSourceLightBulbToFitureRelationToLightBulbToFixtureRelation.c3typ
+*/
+type TransformSourceLightBulbToFixtureRelationToLightBulbToFixtureRelation mixes LightBulbToFixtureRelation transforms SourceLightBulbToFixtureRelation {
+    // The id
+    id: ~ expression "concat(SN,'_',fixture,'_',start)"
+    // The from
+    from: ~ expression {id: "SN"}
+    // To
+    to: ~ expression {id: "fixture"}
+    // Start
+    start: ~ expression "start"
+    // End
+    end: ~ expression "end"
+}

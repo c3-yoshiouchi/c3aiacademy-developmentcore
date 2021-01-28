@@ -1,0 +1,14 @@
+/**
+* SourceLightBulbToFixtureRelation.c3typ
+* The source for {@link LightBulbToFixtureRelation} data
+*/
+type SourceLightBulbToFixtureRelation mixes Source {
+    // The serial number
+    SN: string
+    // The fixture
+    fixture: string
+    // The start date & time
+    start: datetime
+    // The end date & time
+    end: datetime
+}

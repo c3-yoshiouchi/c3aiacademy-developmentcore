@@ -1,0 +1,6 @@
+/**
+* LightBulbToFixtureRelation.c3typ
+* Describes a timed interval relationship between a {@link LightBulb} and a {@link Fixture}
+*/
+@db(index=['to', 'from'])
+entity type LightBulbToFixtureRelation mixes TimedIntervalRelation<LightBulb, Fixture> schema name "LGHT_BLB_FXTR_RLTN"

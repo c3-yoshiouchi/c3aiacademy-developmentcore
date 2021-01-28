@@ -12,6 +12,9 @@ extendable entity type LightBulb schema name "LGHT_BLB" {
     manufacturer: !Manufacturer
     // The start date for this bulb
     startDate: !datetime
-    // typeIdent
-    typeIdent: string
+    // The collection of {@link LightBulbToFixtureRelation}s for this bulb
+    @db(order='descending(start)')
+    fixtureHistory: [LightBulbToFixtureRelation](from)
+    // The {link Fixture} this bulb is currently in
+    currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
 }
