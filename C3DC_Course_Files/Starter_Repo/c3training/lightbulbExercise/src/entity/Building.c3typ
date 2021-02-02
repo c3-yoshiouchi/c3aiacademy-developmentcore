@@ -2,7 +2,7 @@
 * Building.c3typ
 * A single building with many {@link Apartment}s
 */
-entity type Building schema name "BLDNG" {
+entity type Building mixes MetricEvaluatable schema name "BLDNG" {
     // The apartments this building has
     // Collection Field
     apartments: [Apartment](building)

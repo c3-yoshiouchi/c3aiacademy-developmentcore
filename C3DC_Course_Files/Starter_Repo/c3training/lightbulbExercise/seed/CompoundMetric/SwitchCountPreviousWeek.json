@@ -1,0 +1,5 @@
+{
+    "name": "SwitchCountPreviousWeek",
+    "id": "SwitchCountPreviousWeek",
+    "expression": "window('SUM', SwitchCount, -7, 7)"
+}

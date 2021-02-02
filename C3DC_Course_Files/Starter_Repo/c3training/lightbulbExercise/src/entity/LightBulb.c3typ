@@ -17,4 +17,6 @@ extendable entity type LightBulb schema name "LGHT_BLB" {
     fixtureHistory: [LightBulbToFixtureRelation](from)
     // The {link Fixture} this bulb is currently in
     currentFixture: Fixture stored calc 'fixtureHistory[0].(end == null).to'
+
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 }

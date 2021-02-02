@@ -1,0 +1,31 @@
+/**
+* SmartBulbMeasurement.c3typ
+* A single measurement taken from a single {@link SmartBulb}
+*/
+@db(datastore='cassandra',
+ partitionKeyField='parent',
+ persistenceOrder='start',
+ persistDuplicates=false,
+ compactType=true)
+entity type SmartBulbMeasurement mixes TimedDataPoint<SmartBulbMeasurementSeries> schema name 'SMRT_BLB_MSRMNT' {
+
+    // The status of the smart bulb (on or off).
+    @ts(treatment='previous')
+    status: int
+
+    // The measured power (P=IV or current*voltage).
+    @ts(treatment='avg', unitPath="parent.smartBulb.powerUOM")
+    power: double
+
+    // The lumens of the smart bulb
+    @ts(treatment='avg', unitPath="parent.smartBulb.lumemsUOM")
+    lumens: double
+
+    // The voltage of the smart bulb
+    @ts(treatment='avg', unitPath="parent.smartBulb.voltageUOM")
+    voltage: double
+
+    // The temperature of the smart bulb
+    @ts(treatment='avg', unitPath='parent.smartBulb.temperatureUOM')
+    temperature: double
+}

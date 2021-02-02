@@ -1,0 +1,22 @@
+[
+    {
+        "id": "AverageTemperature_Building",
+        "name": "AverageTemperature",
+        "description": "Average Temperature for each SmartBulb in a Building",
+        "srcType": "Building",  
+        "path": "apartments.fixtures.bulbHistory.from.bulbMeasurements",
+        "expression": "avg(avg(normalized.data.temperature))"
+    },
+    {
+        "id": "TSD_PowerGridStatus_Building",
+        "name": "TSD_PowerGridStatus",
+        "description": "Status (1 or 0) indicating ON or OFF of the PowerGrid over time",
+        "srcType": "Building",
+        "tsDecl": {
+            "data": "gridStatusSet",
+            "start": "timestamp",
+            "value": "value",
+            "treatment": "PREVIOUS"
+        }
+    }
+]

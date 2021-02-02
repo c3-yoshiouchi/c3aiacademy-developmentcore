@@ -1,0 +1,5 @@
+{
+    "name": "HasEverFailed",
+    "id": "HasEverFailed",
+    "expression": "rolling('SUM', IsDefective) ? 1 : 0"
+}

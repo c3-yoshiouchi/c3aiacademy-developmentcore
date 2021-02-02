@@ -3,13 +3,20 @@
 * A {@link LightBulb} the streams power data about power consumption,
 * light output, voltage, and temperature.
 */
-entity type SmartBulb extends LightBulb type key "SMRT_BLB" {
+entity type SmartBulb extends LightBulb mixes MetricEvaluatable type key "SMRT_BLB" {
+    
     // Unit of measure for light output
     lumensUOM: Unit post default "{id: 'lumen'}"
+    
     // Unit of measure for wattage
     powerUOM: Unit post default "{id: 'wattage'}"
+    
     // Unit of measure for temperature
     temperatureUOM: Unit post default "{id: 'degrees_fahrenheit'}"
+    
     // Unit of measure for voltage
     voltageUOM: Unit post default "{id: 'volt'}"
+    
+    // A collection of smart bulb measurement
+    bulbMeasurements: [SmartBulbMeasurementSeries](smartBulb)
 }

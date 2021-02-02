@@ -1,0 +1,18 @@
+/**
+* TransformSourceSmartBulbToSmartBulbMeasurementSeries.c3typ
+* Transforms data from {@link SourceSmartBulb} to {@link SmartBulbMeasurementSeries}
+*/
+type TransformSourceSmartBulbToSmartBulbMeasurementSeries mixes SmartBulbMeasurementSeries transforms SourceSmartBulb {
+
+    // The id of a smart bulb measurement series
+    id: ~ expression "concat('SBMS_serialNo_',SN)"
+    
+    // The id of a smart bulb
+    smartBulb: ~ expression {id: "SN"}
+
+    // The time zone a smart bulb has
+    timeZone: ~ expression "'GMT-08:00'"
+    
+    // The interval
+    interval: ~ expression "'HOUR'"
+}

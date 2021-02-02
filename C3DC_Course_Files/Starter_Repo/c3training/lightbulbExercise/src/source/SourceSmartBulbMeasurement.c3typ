@@ -1,0 +1,27 @@
+/**
+* SourceSmartBulbMeasurement.c3typ
+* The source for {@link SmartBulbMeasurement} data
+*/
+type SourceSmartBulbMeasurement mixes Source {
+    
+    // The timestamp
+    TS: datetime
+
+    // The serial number of a fixture
+    SN: string
+
+    // The status of a {@link SmartBulb}
+    Status: int
+
+    // The wattage of a {@link SmartBulb}
+    Watts: double
+
+    // The lumens of a {@link SmartBulb}
+    Lumens: double
+
+    // The voltage of a {@link SmartBulb}
+    Voltage: double
+
+    // The temperature of a {@link SmartBulb}
+    Temp: double
+}

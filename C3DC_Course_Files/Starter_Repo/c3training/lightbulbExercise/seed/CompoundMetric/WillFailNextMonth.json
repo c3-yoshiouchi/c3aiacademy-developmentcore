@@ -1,0 +1,5 @@
+{
+    "name": "WillFailNextMonth",
+    "id": "WillFailNextMonth",
+    "expression": "window('MAX', IsDefective, 0, 30)"
+}
