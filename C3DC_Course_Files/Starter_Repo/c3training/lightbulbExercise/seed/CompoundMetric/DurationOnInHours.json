@@ -1,0 +1,5 @@
+{
+    "name": "DurationOnInHours",
+    "id": "DurationOnInHours",
+    "expression": "rolling('SUM', Status) ? 1 : 0"
+}

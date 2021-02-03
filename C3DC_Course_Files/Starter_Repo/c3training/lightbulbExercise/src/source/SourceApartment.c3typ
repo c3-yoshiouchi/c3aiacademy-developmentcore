@@ -1,0 +1,22 @@
+/**
+* Apartment.c3typ
+* The source for {@link Apartment}, {@link Building}, and {@link City} data
+*/
+type SourceApartment mixes Source {
+    
+    // The id of an apartment
+    apartment: string
+    
+    // The id of a building
+    building: string
+    
+    // The id of a city
+    city: string
+    
+    // The latitude of an apartment
+    latitude: double
+    
+    // The longitude of an apartment
+    longitude: double
+    
+}

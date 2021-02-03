@@ -1,0 +1,22 @@
+/**
+* TransformSourceFixtureToApartmentRelationToFixtureToApartmentRelation.c3typ
+* Transforms data from {@link SourceFixtureToApartmentRelation} to {@link FixtureToApartmentRelation}
+*/
+type TransformSourceFixtureToApartmentRelationToFixtureToApartmentRelation mixes FixtureToApartmentRelation transforms SourceFixtureToApartmentRelation {
+    
+    // The id
+    id: ~ expression "concat(Fixture,'_',Apartment,'_',StartDate)"
+    
+    // The from
+    from: ~ expression {id: "Fixture"}
+    
+    // To
+    to: ~ expression {id: "Apartment"}
+    
+    // Start
+    start: ~ expression "StartDate"
+    
+    // End
+    end: ~ expression "EndDate"
+    
+}

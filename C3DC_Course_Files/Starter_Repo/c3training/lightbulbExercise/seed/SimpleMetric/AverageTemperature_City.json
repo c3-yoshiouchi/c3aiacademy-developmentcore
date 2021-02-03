@@ -1,0 +1,8 @@
+{
+    "id": "AverageTemperature_City",
+    "name": "AverageTemperature",
+    "description": "Average temperature of all SmartBulbs in a City",
+    "srcType": "City",
+    "path": "buildings.apartments.fixtures.bulbHistory.from.bulbMeasurements",
+    "expression": "avg(avg(normalized.data.temperature))"
+}

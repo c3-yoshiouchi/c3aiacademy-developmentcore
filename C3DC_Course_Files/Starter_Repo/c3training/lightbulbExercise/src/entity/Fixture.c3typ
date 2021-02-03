@@ -3,6 +3,7 @@
 * A single light fixture in which one {@link SmartBulb} can be installed.
 */
 entity type Fixture schema name "FXTR" {
+    
     // The apartment this fixture is in
     // Reference Field
     apartment: !Apartment
@@ -10,6 +11,16 @@ entity type Fixture schema name "FXTR" {
     // The collection of {@link LightBulbToFixtureRelation}s for this bulb
     @db(order='descending(start)')
     bulbHistory: [LightBulbToFixtureRelation](to)
+    
     // The {link LightBulb} this fixture has
     currentBulb: LightBulb stored calc 'bulbHistory[0].(end == null).to'
+
+
+    // The collection of {@link FixtureToApartmentRelation}s for this fixture
+    @db(order='descending(start)')
+    apartmentHistory: [FixtureToApartmentRelation](from)
+    
+    // The {link Apartment} this fixture is currently in
+    currentApartment: Apartment stored calc 'apartmentHistory[0].(end == null).to'
+
 }

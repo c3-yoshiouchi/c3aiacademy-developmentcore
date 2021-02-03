@@ -1,0 +1,22 @@
+/**
+* TransformSourceApartmentToApartment.c3typ
+* Transforms data from {@link SourceApartment} to {@link Apartment}
+*/
+type TransformSourceApartmentToApartment mixes Apartment transforms SourceApartment {
+    
+    // The id of an apartment
+    id: ~ expression "apartment"
+    
+    // A reference to the id of a building
+    building: ~ expression { id: "building" }
+    
+    // A reference to the id of a city
+    // city: ~ expression { id: "city" }
+
+    // The latitude of an apartment
+    // latitude: ~ expression "latitude"
+
+    // The longitude of an apartment
+    // longitude: ~ expression "longitude"
+
+}

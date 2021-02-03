@@ -1,0 +1,8 @@
+{
+    "id": "PowerUsageSum_SmartBulb",
+    "name": "PowerUsageSum",
+    "description": "Sum of power usage of SmartBulbs",
+    "srcType": "SmartBulb",
+    "path": "bulbMeasurements",
+    "expression": "window('SUM', sum(normalized.data.power), -10, 10, 5)"
+}

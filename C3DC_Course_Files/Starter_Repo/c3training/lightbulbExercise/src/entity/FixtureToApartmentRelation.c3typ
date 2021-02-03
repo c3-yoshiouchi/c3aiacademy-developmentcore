@@ -1,0 +1,6 @@
+/**
+* FixtureToApartmentRelation.c3typ
+* Describes a timed interval relationship between a {@link Fixture} and a {@link Apartment}
+*/
+@db(index=['to', 'from'])
+entity type FixtureToApartmentRelation mixes TimedIntervalRelation<Fixture, Apartment> schema name "FXTR_APRTMNT_RLTN"

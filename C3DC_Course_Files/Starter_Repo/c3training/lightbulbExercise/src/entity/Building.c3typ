@@ -20,4 +20,7 @@ entity type Building mixes MetricEvaluatable schema name "BLDNG" {
     // The current power grid status for this building
     @db(timedValueHistoryField='gridStatusSet')
     gridStatus: PowerGridStatus
+
+    // The city this building is in
+    city: !City
 }

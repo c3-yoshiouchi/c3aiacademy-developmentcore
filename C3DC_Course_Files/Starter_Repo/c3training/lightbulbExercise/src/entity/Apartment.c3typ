@@ -3,10 +3,26 @@
 * An apartment in a {@link Building} with many {@link Fixuture}s in it
 */
 entity type Apartment schema name "APRTMNT" {
+
     // The building this apartment is in
     // Reference Field
     building: !Building
-    // The fixtures in the apartment
+
+    // The fixtures this apartment has
     // Collection Field
     fixtures: [Fixture](apartment)
+    
+    // The latitude of an apartment
+    // latitude: double
+    
+    // The longitude of an apartment
+    // longitude: double
+
+    // The collection of {@link FixtureToApartmentRelation}s for this fixture
+    @db(order='descending(start)')
+    fixtureHistory: [FixtureToApartmentRelation](to)
+    
+    // The {link Fixture} this apartment curently has
+    currentFixture: Fixture stored calc 'bulbFixture[0].(end == null).to'
+
 }
